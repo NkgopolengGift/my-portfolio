@@ -1,4 +1,3 @@
-import React from "react";
 import { FaLaptopCode, FaMobileAlt, FaDatabase, FaCode } from "react-icons/fa";
 import { MdOutlineDeveloperMode } from "react-icons/md";
 import { MyCard } from "@/components/MyComponents/MyCard";

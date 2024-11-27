@@ -128,7 +128,7 @@ const ContactMe: React.FC = () => {
             <Textarea
               id="message"
               {...register("message", { required: true })}
-              rows="5"
+              rows={5}
               className="w-full p-2 mt-1 border border-gray-300 rounded focus:ring focus:ring-primary"
             ></Textarea>
           </div>

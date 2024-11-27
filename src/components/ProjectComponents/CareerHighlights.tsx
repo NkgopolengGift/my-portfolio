@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import Experience from "@/components/ProjectComponents/Experience";
 import Education from "@/components/ProjectComponents/Education";
 import Skills from "@/components/ProjectComponents/Skills";
