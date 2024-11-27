@@ -10,7 +10,9 @@ import {
 const Experience = () => {
   return (
     <div className="w-full h-full overflow-y-auto">
-      <h2 className="text-3xl font-robert-medium mb-4">My Experience</h2>
+      <h2 className="text-3xl font-robert-medium mb-8 text-center text-blue-500 font-bold ">
+        My Experience
+      </h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-4">
         <Card className="w-full max-w-[450px] p-4 transform transition-transform hover:scale-105 hover:shadow-lg hover:bg-primary bg-card text-card-foreground">
           <CardHeader>

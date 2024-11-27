@@ -17,7 +17,7 @@ const NavBar = () => {
   return (
     <nav className="bg-background dark:bg-background sticky top-0 z-50 shadow-xl">
       <div className="max-w-7xl mx-auto px-2 sm:px-2 lg:px-8">
-        <div className="flex items-center justify-between h-16 border-b border-gray-200 dark:border-gray-700">
+        <div className="flex items-center justify-between h-20 border-b border-gray-200 dark:border-gray-700">
           <div className="flex items-center">
             <div className="text-foreground text-3xl font-bold font-robert-medium">
               Portfolio
@@ -36,7 +36,7 @@ const NavBar = () => {
               isOpen ? "block bg-background dark:bg-background" : "hidden"
             } w-full flex-grow lg:flex lg:items-center lg:w-auto`}
           >
-            <ul className="flex flex-col lg:flex-row lg:ml-auto lg:space-x-6 mr-10">
+            <ul className="flex flex-col  lg:flex-row lg:ml-auto lg:space-x-6 mr-10">
               <li>
                 <Link
                   to="/"

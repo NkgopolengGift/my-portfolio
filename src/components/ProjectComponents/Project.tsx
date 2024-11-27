@@ -15,7 +15,7 @@ const projects: Project[] = [
     description:
       "A secure and user-friendly password manager application(mobile).",
     tools: "React Native, Spring Boot, PostgreSQL",
-    image: "../../../public/img/Pasted image.jpg",
+    image: "/img/SafeAuth.jpg",
     github: "https://github.com/NkgopolengGift/SafeAuth-mobile",
   },
   {
@@ -23,7 +23,7 @@ const projects: Project[] = [
     description:
       "A website created to showcase and manage electrical services provided by Balaudzi Electrical Projects.",
     tools: "HTML, Bootstrap, jQuery, Owl Carousel, JavaScript",
-    image: "../../../public/img/Pasted image.jpg",
+    image: "/img/balaudzi.jpg",
     github: "https://github.com/NkgopolengGift/Balaudzi-Electrical-Projects",
   },
   {
@@ -32,7 +32,7 @@ const projects: Project[] = [
       "A platform designed to connect influencers with potential sponsors by aggregating key statistics from various social media platforms like YouTube, TikTok, Facebook, etc.",
     tools:
       "Django, PostgreSQL, HTML, CSS, JavaScript, YouTube API, Instagram API",
-    image: "../../../public/img/Pasted image.jpg",
+    image: "/img/social stats.png",
     github: "https://github.com/NkgopolengGift/InfluencerConnect",
   },
   {
@@ -40,7 +40,7 @@ const projects: Project[] = [
     description:
       "A platform aimed at helping individuals without formal qualifications find jobs such as cleaner, gardener, and more.",
     tools: "Spring Boot (Java), PostgreSQL, JavaScript, HTML, CSS",
-    image: "../../../public/img/Pasted image.jpg",
+    image: "/img/jobs.avif",
     github: "https://github.com/NkgopolengGift/JobMatchup",
   },
 ];

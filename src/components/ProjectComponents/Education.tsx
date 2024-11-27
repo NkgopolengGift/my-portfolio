@@ -10,7 +10,7 @@ import {
 const Education = () => {
   return (
     <div className="w-full h-full overflow-y-auto">
-      <h2 className="text-3xl font-robert-medium mb-4">
+      <h2 className="text-3xl font-robert-medium mb-4 text-center text-blue-500">
         Education & Certificates
       </h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-4">
@@ -26,7 +26,7 @@ const Education = () => {
                 <strong>Year:</strong> 2020
               </p>
               <p className="text-left font-robert-medium text-lg underline">
-                <strong>School:</strong> Machepelele High School
+                <strong>School:</strong> Machepelele Secondary School
               </p>
               <p className="text-left font-robert-medium text-lg">
                 Completed my senior certificate with a focus on mathematics and
@@ -88,7 +88,7 @@ const Education = () => {
           <CardContent>
             <CardDescription className="text-center font-general">
               <p className="text-center  font-robert-medium text-lg">
-                <strong>Year:</strong> 2013
+                <strong>Year:</strong> 2023
               </p>
               <p className="text-left font-robert-medium text-lg underline">
                 <strong>Institute:</strong> Cisco Networking Academy at TUT

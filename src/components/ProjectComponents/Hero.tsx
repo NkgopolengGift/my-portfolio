@@ -1,7 +1,6 @@
 import React from "react";
 import { FaGithub, FaLinkedin, FaTiktok } from "react-icons/fa";
 import { useTypewriter, Cursor } from "react-simple-typewriter";
-import about from "../../../public/img/about-1.jpg";
 
 export const Hero = () => {
   const [text] = useTypewriter({
@@ -9,6 +8,8 @@ export const Hero = () => {
     loop: true,
     delaySpeed: 2000,
   });
+
+  const aboutImage = "/img/about-1.jpg";
 
   return (
     <div className="relative h-full w-screen overflow-hidden flex flex-col items-center justify-center lg:flex-row lg:justify-between p-6 bg-background text-foreground">
@@ -22,7 +23,7 @@ export const Hero = () => {
           I'm a <span className="text-primary">{text}</span>
           <Cursor cursorColor="var(--primary-foreground)" />
         </h2>
-        <p className="text-left lg:text-left lg:text-lg max-w-md mb-4 hidden lg:block  font-robert-regular">
+        <p className="text-left lg:text-left lg:text-lg max-w-md mb-4 hidden lg:block font-robert-regular">
           Welcome to my <span className="text-blue-500">portfolio</span>! I'm a
           passionate software developer driven to create impactful solutions. My
           mission is to make software that not only meets but exceeds user
@@ -37,7 +38,7 @@ export const Hero = () => {
             href="https://github.com/NkgopolengGift"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-4xl p-2 hover:bg-primary transition-colors duration-300 rounded-md"
+            className="text-4xl p-2 hover:bg-primary transition-transform transform duration-300 rounded-md hover:scale-110"
           >
             <FaGithub />
           </a>
@@ -45,7 +46,7 @@ export const Hero = () => {
             href="https://www.linkedin.com/in/nkgopolenggift/"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-4xl p-2 hover:bg-primary transition-colors duration-300 rounded-md"
+            className="text-4xl p-2 hover:bg-primary transition-transform transform duration-300 rounded-md hover:scale-110"
           >
             <FaLinkedin />
           </a>
@@ -53,7 +54,7 @@ export const Hero = () => {
             href="https://www.tiktok.com/@nkgopoleng_gift"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-4xl p-2 hover:bg-primary transition-colors duration-300 rounded-md"
+            className="text-4xl p-2 hover:bg-primary transition-transform transform duration-300 rounded-md hover:scale-110"
           >
             <FaTiktok />
           </a>
@@ -62,7 +63,7 @@ export const Hero = () => {
       <div className="mt-6 lg:mt-0 lg:ml-6 lg:mr-20">
         <div className="relative w-40 h-40 md:w-64 md:h-64 lg:w-80 lg:h-80">
           <img
-            src={about}
+            src={aboutImage}
             alt="Nkgopoleng Gift"
             className="rounded-full w-full h-full object-cover"
           />

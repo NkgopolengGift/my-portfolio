@@ -44,7 +44,7 @@ const CareerHighlights = () => {
                 : "bg-gray-200 text-gray-700"
             }`}
           >
-            Education
+            Education & Certificates
           </button>
           <button
             onClick={() => setView("Skills")}
