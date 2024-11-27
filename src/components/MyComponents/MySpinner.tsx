@@ -1,9 +1,13 @@
+// This spinner is used in the form submission
 import React from "react";
 
-// This spinner is used in the form submission
-const MySpinner: React.FC = () => {
+interface MySpinnerProps {
+  className?: string;
+}
+
+const MySpinner: React.FC<MySpinnerProps> = ({ className }) => {
   return (
-    <div className="spinner-container">
+    <div className={`spinner-container ${className}`}>
       <div className="spinner"></div>
       <style jsx>{`
         .spinner-container {

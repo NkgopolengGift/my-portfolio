@@ -1,4 +1,3 @@
-import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { ShadCDNThemeProvider } from "@/components/MyComponents/ShadCDNThemeProvider";
 import NavBar from "./components/ProjectComponents/NavBar";

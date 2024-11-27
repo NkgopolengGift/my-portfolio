@@ -1,4 +1,3 @@
-import React from "react";
 import { FaGithub, FaLinkedin, FaTiktok } from "react-icons/fa";
 import { useTypewriter, Cursor } from "react-simple-typewriter";
 

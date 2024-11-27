@@ -50,3 +50,4 @@ export default tseslint.config({
 ```
 # portfolio-v2
 # portfolio-v2
+# my-portfolio-frontend
