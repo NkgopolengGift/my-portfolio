@@ -32,7 +32,7 @@ const projects: Project[] = [
       "A platform designed to connect influencers with potential sponsors by aggregating key statistics from various social media platforms like YouTube, TikTok, Facebook, etc.",
     tools:
       "Django, PostgreSQL, HTML, CSS, JavaScript, YouTube API, Instagram API",
-    image: "/img/social stats.png",
+    image: "/img/InfluencerConnect.png",
     github: "https://github.com/NkgopolengGift/InfluencerConnect",
   },
   {
