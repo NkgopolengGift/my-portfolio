@@ -1,93 +1,73 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
 import { ThemeToggleButton } from "@/components/MyComponents/ThemeToggleButton";
-import { TiThMenu } from "react-icons/ti";
+import { Menu, X } from "lucide-react";
+
+const navItems = [
+  { label: "Home", href: "/" },
+  { label: "Specialities", href: "/specialities" },
+  { label: "Career-Highlights", href: "/career-highlights" },
+  { label: "Projects", href: "/projects" },
+  { label: "Contact", href: "/contact" },
+];
 
 const NavBar = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [mobileDrawerOpen, setMobileDrawerOpen] = useState(false);
 
-  const handleToggle = () => {
-    setIsOpen(!isOpen);
-  };
-
-  const handleClose = () => {
-    setIsOpen(false);
+  const toggleNavbar = () => {
+    setMobileDrawerOpen(!mobileDrawerOpen);
   };
 
   return (
-    <nav className="bg-background dark:bg-background sticky top-0 z-50 shadow-xl">
-      <div className="max-w-7xl mx-auto px-2 sm:px-2 lg:px-8">
-        <div className="flex items-center justify-between h-20 border-b border-gray-200 dark:border-gray-700">
-          <div className="flex items-center">
+    <nav className="sticky top-0 z-50 py-4 backdrop-blur-sm border-b border-border shadow-green-700 transition-colors duration-300 bg-background text-foreground">
+      <div className="container px-4 mx-auto relative lg:text-sm">
+        <div className="flex justify-between items-center">
+          <div className="flex items-center flex-shrink-0">
             <div className="text-foreground text-3xl font-bold font-robert-medium">
               Portfolio
             </div>
           </div>
-          <div className="block lg:hidden">
-            <button
-              onClick={handleToggle}
-              className="text-foreground focus:outline-none"
-            >
-              <TiThMenu />
+
+          <ul className="hidden lg:flex ml-14 space-x-12">
+            {navItems.map((item, index) => (
+              <li key={index}>
+                <a
+                  href={item.href}
+                  className="text-base text-foreground font-robert-medium font-semibold transition hover:text-primary hover:bg-secondary hover:underline hover:scale-105"
+                >
+                  {item.label}
+                </a>
+              </li>
+            ))}
+          </ul>
+
+          <div className="hidden lg:flex justify-center space-x-12 items-center">
+            <ThemeToggleButton />
+          </div>
+          <div className="lg:hidden sm:flex flex-col justify-end">
+            <button onClick={toggleNavbar}>
+              {mobileDrawerOpen ? <X /> : <Menu />}
             </button>
           </div>
-          <div
-            className={`${
-              isOpen ? "block bg-background dark:bg-background" : "hidden"
-            } w-full flex-grow lg:flex lg:items-center lg:w-auto`}
-          >
-            <ul className="flex flex-col  lg:flex-row lg:ml-auto lg:space-x-6 mr-10">
-              <li>
-                <Link
-                  to="/"
-                  onClick={handleClose}
-                  className="text-foreground block px-6 py-3 rounded-md text-base font-robert-medium hover:bg-primary"
-                >
-                  Home
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/specialities"
-                  onClick={handleClose}
-                  className="text-foreground block px-6 py-3 rounded-md text-base font-robert-medium hover:bg-primary"
-                >
-                  Specialities
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/career-highlights"
-                  onClick={handleClose}
-                  className="text-foreground block px-6 py-3 rounded-md text-base font-robert-medium hover:bg-primary"
-                >
-                  Career-Highlights
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/projects"
-                  onClick={handleClose}
-                  className="text-foreground block px-6 py-3 rounded-md text-base font-robert-medium hover:bg-primary"
-                >
-                  Projects
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/contact"
-                  onClick={handleClose}
-                  className="text-foreground block px-6 py-3 rounded-md text-base font-robert-medium hover:bg-primary"
-                >
-                  Contact
-                </Link>
-              </li>
+        </div>
+        {mobileDrawerOpen && (
+          <div className="fixed right-0 z-20 bg-background w-full p-12 flex flex-col justify-center items-center lg:hidden">
+            <ul>
+              {navItems.map((item, index) => (
+                <li key={index} className="py-4">
+                  <a
+                    href={item.href}
+                    className="text-lg text-foreground hover:underline hover:bg-secondary hover:scale-105"
+                  >
+                    {item.label}
+                  </a>
+                </li>
+              ))}
             </ul>
-            <div onClick={handleClose}>
+            <div className="flex space-x-6">
               <ThemeToggleButton />
             </div>
           </div>
-        </div>
+        )}
       </div>
     </nav>
   );
